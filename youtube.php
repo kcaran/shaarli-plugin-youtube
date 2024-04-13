@@ -11,7 +11,7 @@ use Shaarli\Bookmark\LinkUtils;
 use Shaarli\Render\TemplatePage;
 
 function youtube_url( $url ) {
-  $pattern = '/^https:\/\/www\.youtube\.com\/watch\?v=(?<video_id>[^&]+)/i';
+  $pattern = '/^https:\/\/(www|m)\.youtube\.com\/watch\?v=(?<video_id>[^&]+)/i';
   if (preg_match( $pattern, $url, $match )) {
     return $match['video_id'];
    }
