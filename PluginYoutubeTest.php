@@ -31,19 +31,19 @@ class PluginYoutubeTest extends \Shaarli\TestCase
     {
         $video_id = 'clKQhawfADs';
         $youtube_url = 'https://www.youtube.com/watch?v=' . $video_id;
-        $rtn_val = youtube_url( $youtube_url );
+        $rtn_val = youtube_url($youtube_url);
         $this->assertEquals($rtn_val, $video_id);
 
         $youtube_url = 'https://www.youtube.com/watch?v=' . $video_id . '&t=130s';
-        $rtn_val = youtube_url( $youtube_url );
+        $rtn_val = youtube_url($youtube_url);
         $this->assertEquals($rtn_val, $video_id);
 
         $youtube_url = 'https://youtu.be/' . $video_id;
-        $rtn_val = youtube_url( $youtube_url );
+        $rtn_val = youtube_url($youtube_url);
         $this->assertEquals($rtn_val, $video_id);
 
         $youtube_url = 'https://youtu.be/' . $video_id . '?t=130';
-        $rtn_val = youtube_url( $youtube_url );
+        $rtn_val = youtube_url($youtube_url);
         $this->assertEquals($rtn_val, $video_id);
     }
 }
