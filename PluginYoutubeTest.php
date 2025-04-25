@@ -38,6 +38,10 @@ class PluginYoutubeTest extends \Shaarli\TestCase
         $rtn_val = youtube_url($youtube_url);
         $this->assertEquals($rtn_val, $video_id);
 
+        $youtube_url = 'https://www.youtube.com/watch?app=desktop&v=' . $video_id . '&t=130s';
+        $rtn_val = youtube_url($youtube_url);
+        $this->assertEquals($rtn_val, $video_id);
+
         $youtube_url = 'https://youtu.be/' . $video_id;
         $rtn_val = youtube_url($youtube_url);
         $this->assertEquals($rtn_val, $video_id);
